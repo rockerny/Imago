@@ -1,0 +1,592 @@
+
+@font-face {
+	font-family: "flexo-light";
+	src: url(font/flexo-light.otf) format("truetype");
+}
+
+
+@font-face {
+	font-family: "fromwhereyouare";
+	src: url(font/fromwhereyouare.ttf) format("opentype");
+}
+
+body{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: "flexo-light", tahoma;
+	font-size: 16px;
+}
+a{text-decoration: none;}
+
+h1{
+	position: absolute;
+	top: 0;
+	left: 30%;
+	z-index: -1;
+
+}
+header{
+	width: 90%;
+	background-color: white;
+	margin: 0 auto;
+
+}
+ul { 
+	list-style-type: none;
+	text-align: left;
+  	margin: 0 auto;
+    padding: 0px 0px 0px 20px;
+    list-style: none;
+    position: relative;
+    box-sizing: border-box;/*propiedad css3*/
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border-radius: 5px;
+   -moz-border-radius: 5px;
+   -webkit-border-radius: 5px;
+
+}
+
+ 
+/*Estilos para los elementos li primer nivel*/
+ul li {
+    display: block;
+    float:left;
+    position: relative;
+}
+ 
+/*Listas primer nivel*/
+ul li a {
+     font: 0.9em "flexo-light", Tahoma, Geneva, sans-serif;
+     color: #fefefe;
+     text-decoration: none;
+     display: block;
+     float:left;
+     position: relative;
+     padding: 15px;
+     z-index: 2000;
+}
+ 
+/*Estado Hover/Activo de los enlaces*/
+ul li a:hover, ul li a:active {
+     background: #0d345e;
+     color: white;
+   
+}
+
+
+
+.col{
+	position: relative;
+	width: 200px;
+	float: left;
+}
+.col img{
+	width:100%;
+	height: auto; }
+
+ul li ul li.ind{
+	z-index: 10;
+}
+ul li ul li.ind{
+	z-index: 9;
+}
+ul li ul {
+    margin: 10px 0 0 0;
+    padding: 10px;
+    width: 620px;
+    height: auto;
+    float: left;
+    position: absolute;
+    left: 0px;
+    top: 43px;
+    border: 0;
+    overflow: hidden;
+    background: #eaeaea;
+    z-index: -1;
+    
+    /*Aplicamos opacidad cero, animaremos a 1 en el estado hover*/
+    display: none;
+    opacity: 0;
+    filter: alpha(opacity=0); /* Internet Explorer*/
+ 
+    /*Aplicamos bordes redondeados a las esquinas inferiores.*/
+    border-radius: 0px 0px 5px 5px;
+    -moz-border-radius: 0px 0px 5px 5px;
+    -webkit-border-radius: 0px 0px 5px 5px;
+    
+    /*definimos desde donde inicia el ancho de la caja*/
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+ 
+    /*Aplicamos la animación */
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    -ms-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+ ul li ul.children2 {
+ 	margin: 10px 0 0 -300px;
+
+ }
+
+
+
+
+ 
+/*Eliminamos el border-bottom al último enlace de la lista*/
+ul li ul.children li:last-child a{border-bottom:none !important;}
+ 
+
+
+ul li:hover ul.children{
+	display: block;
+    min-height:100px; 
+    opacity:1;
+}
+
+
+
+
+/*CHILDERN 2  */
+
+ul li ul.children2 li a{
+    color: #fefefe !important;
+    padding: 13px 0 13px 20px;
+    width: 130px;
+    border-bottom: 1px solid #2f2f2f;
+    background: url(img/arrow-normal.png) no-repeat 7px center !important;
+    font-size: 12px;
+	
+    /*Aplicamos efecto de transation a los enlaces*/
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+ 
+/*Eliminamos el border-bottom al último enlace de la lista*/
+ul li ul.children2 li:last-child a{border-bottom:none !important;}
+ 
+
+
+ul li:hover ul.children2{
+    min-height:100px; 
+    opacity:1;
+    display: block;
+}
+.children2 h2{
+	color:#10458b;
+	font-size: 1em;
+}
+.children2 p{
+	
+	font-size: 0.8em;
+}
+
+/* FIN CHILDERN   */
+
+
+
+
+nav{
+	display: block;
+	width: 100%;
+	height: 48px;
+	background-color:#10458b; 
+	position: relative;
+    
+     z-index: 2000;
+
+}
+
+.children h2{
+	color:#10458b;
+	font-size: 1em;
+}
+.children p{
+	
+	font-size: 0.8em;
+}
+#menu{
+	width: 90%;
+}
+
+.delivery{
+	float: right;
+	border-left: solid 2px #ec6d2d;
+	padding: 0 10px;
+}
+
+.buscador{
+	position: relative;
+	
+	float: right;
+}
+img.icofsc{
+	width: 30px;
+	height: auto;
+}
+.lupa{
+width: 170px;
+height: 25px;
+background-image: url('../img/icons/lupa.gif');
+background-size: 10%;
+background-repeat: no-repeat;
+background-position: 5px 3px;
+border-radius: 10px;
+border: solid 1px #10458b;
+padding-left: 10px;
+}
+
+
+.datos{
+	float: left;
+	text-align: right;
+	width: 75%;
+	background-color: white;
+	
+}
+.delivery img{
+	width: 80px;
+	height: auto;
+
+}
+.delivery img:hover{ 
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2)
+}
+
+.datoscontacto{
+	
+	
+	padding: 20px 10px;
+	line-height: 8px;
+
+}
+.flexo{
+	font-family: "flexo-light";
+	color: #10458b;
+	font-size: 0.5em;
+}
+.datoscontacto p{
+	
+	
+	font-family: "flexo-light";
+	color: #10458b;
+	font-size: 0.5em;
+	letter-spacing: 0.6em;
+
+
+}
+.clear{
+	clear: both;
+}
+.cuerpo{
+	width: 100%;
+	
+}
+.izquierda{
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
+	overflow: hidden;
+
+	
+}
+.textserv{
+	width: 100%;
+	background-color: #f7a600;
+	position: absolute;
+	margin-top: 235px;
+	opacity: 0.9;
+	transition: margin-top 1s;
+
+
+}
+.textserv:hover{
+	width: 100%;
+	
+	position: absolute;
+	margin-top: 150px;
+}
+.serv{
+	position: relative;
+	width: 23%;
+	height: auto;
+	float: left;
+  overflow: hidden;
+	margin: 0 15px 15px 0; 
+}
+.leftser{
+	margin-left: 20px;
+}
+
+.serv img{
+	width: 100%;
+}
+.encuentranos{
+	float: right;
+	text-align: center;
+	font-size: 0.8em;
+	padding: 0 20px;
+}
+
+.encuentranos a{
+	color:#10458b;
+}
+.encuentranos a:hover{
+	font-weight: bold;
+	color:#10458b;
+}
+.encuentranos img{
+	text-align: center;
+	width: 18px;
+	padding-top: 20px;
+	height: auto;
+
+}
+
+
+.logo{
+	float: left;
+
+	width: 25%;
+
+	
+}
+.logo img{
+	min-width: 200px;
+	width: 50%;
+	height: auto;
+}
+.menucito{
+	float: right;
+	padding-top: 5px;
+
+}
+.menucito .last{
+	border: none;
+}
+.menucito a{
+
+	font-size: 0.8em;
+	padding:0 15px 0 7px;
+	border-right: solid 1px #10458b;
+	color: #10458b;
+}
+.menucito a:hover{
+
+	color: #ec6d2d;
+}
+
+.menucito a:active{
+
+	color: #f6a633;
+}
+.navegador{
+	position: relative;
+	background-color: orange;
+	
+}
+
+
+.navegador a{
+	position: relative;
+	text-align: left;
+	display: inline-block;
+	float: right;
+}
+.telefonos{
+	float: right;
+	text-align: center;
+
+}
+
+.telefonos a{
+	font-family: "fromwhereyouare";
+	font-size: 1em;
+	color: #10458b;
+
+}
+.telefonos a span{
+	font-size: 0.7em;
+	font-weight: bold;
+	font-family: "flexo-light";
+
+}
+.whatsapp{
+	width: 18px;
+	height: auto;
+	padding-right: 5px;
+
+}
+
+
+
+
+
+
+
+
+
+/*   
+
+
+Agregado Slider
+
+*/
+
+
+#slides {
+      display: none
+    }
+
+    #slides .slidesjs-navigation {
+      margin-top:5px;
+    }
+
+    a.slidesjs-next,
+    a.slidesjs-previous,
+    a.slidesjs-play,
+    a.slidesjs-stop {
+      background-image: url(img/btns-next-prev.png);
+      background-repeat: no-repeat;
+      display:block;
+      width:12px;
+      height:18px;
+      overflow: hidden;
+      text-indent: -9999px;
+      float: left;
+      margin-right:5px;
+    }
+
+    a.slidesjs-next {
+      margin-right:10px;
+      background-position: -12px 0;
+    }
+
+    a:hover.slidesjs-next {
+      background-position: -12px -18px;
+    }
+
+    a.slidesjs-previous {
+      background-position: 0 0;
+    }
+
+    a:hover.slidesjs-previous {
+      background-position: 0 -18px;
+    }
+
+    a.slidesjs-play {
+      width:15px;
+      background-position: -25px 0;
+    }
+
+    a:hover.slidesjs-play {
+      background-position: -25px -18px;
+    }
+
+    a.slidesjs-stop {
+      width:18px;
+      background-position: -41px 0;
+    }
+
+    a:hover.slidesjs-stop {
+      background-position: -41px -18px;
+    }
+
+    .slidesjs-pagination {
+      margin: 7px 0 0;
+      float: right;
+      list-style: none;
+    }
+
+    .slidesjs-pagination li {
+      float: left;
+      margin: 0 1px;
+    }
+
+    .slidesjs-pagination li a {
+      display: block;
+      width: 13px;
+      padding:3px 5px; 
+      border-radius: 25px;
+      height: auto;
+      
+      background-color: gray;
+      background-image: url(img/pagination.png);
+      background-position: 0 0;
+      float: left;
+      overflow: hidden;
+    }
+
+    .slidesjs-pagination li a.active,
+    .slidesjs-pagination li a:hover.active {
+      background-position: 0 -13px
+    }
+
+    .slidesjs-pagination li a:hover {
+      background-position: 0 -26px
+    }
+
+    #slides a:link,
+    #slides a:visited {
+      
+    }
+
+    #slides a:hover,
+    #slides a:active {
+      
+    }
+
+    .navbar {
+      overflow: hidden
+    }
+
+
+
+
+     #slides {
+      display: none
+    }
+
+    .container {
+      margin: 0 auto
+    }
+
+    /* For tablets & smart phones */
+    @media (max-width: 767px) {
+      body {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .container {
+        width: auto
+      }
+    }
+
+    /* For smartphones */
+    @media (max-width: 480px) {
+      .container {
+        width: auto
+      }
+    }
+
+    /* For smaller displays like laptops */
+    @media (min-width: 768px) and (max-width: 979px) {
+      .container {
+        width: 724px
+      }
+    }
+
+    /* For larger displays */
+    @media (min-width: 1200px) {
+      .container {
+        width: 1170px
+      }
+    }
