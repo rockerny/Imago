@@ -10,6 +10,8 @@
 .clearfix {
   *zoom: 1;
 }
+
+a{text-decoration: none;}
 .clearfix:before,
 .clearfix:after {
   display: table;
@@ -1713,7 +1715,7 @@ small {
 }
 
 a:link, a:visited {
-    
+
     text-decoration: none;
     font-weight: 600;
 }

@@ -1,13 +1,13 @@
 
 @font-face {
 	font-family: "flexo-light";
-	src: url(font/flexo-light.otf) format("truetype");
+	src: url(../font/flexo-light.otf) format("truetype");
 }
 
 
 @font-face {
 	font-family: "fromwhereyouare";
-	src: url(font/fromwhereyouare.ttf) format("opentype");
+	src: url(../font/fromwhereyouare.ttf) format("opentype");
 }
 
 body{
@@ -26,13 +26,19 @@ h1{
 	z-index: -1;
 
 }
+
+h3{
+	font-size: 1.2em;
+}
 header{
 	width: 90%;
+	max-width: 1200px;
+
 	background-color: white;
 	margin: 0 auto;
 
 }
-ul { 
+ul {
 	list-style-type: none;
 	text-align: left;
   	margin: 0 auto;
@@ -48,14 +54,15 @@ ul {
 
 }
 
- 
+
 /*Estilos para los elementos li primer nivel*/
 ul li {
     display: block;
     float:left;
     position: relative;
+		text-decoration: none;
 }
- 
+
 /*Listas primer nivel*/
 ul li a {
      font: 0.9em "flexo-light", Tahoma, Geneva, sans-serif;
@@ -67,15 +74,17 @@ ul li a {
      padding: 15px;
      z-index: 2000;
 }
- 
+
 /*Estado Hover/Activo de los enlaces*/
 ul li a:hover, ul li a:active {
      background: #0d345e;
      color: white;
-   
+
 }
 
-
+p.recojo{
+	padding-top: 7px;
+}
 
 .col{
 	position: relative;
@@ -105,22 +114,22 @@ ul li ul {
     overflow: hidden;
     background: #eaeaea;
     z-index: -1;
-    
+
     /*Aplicamos opacidad cero, animaremos a 1 en el estado hover*/
     display: none;
     opacity: 0;
     filter: alpha(opacity=0); /* Internet Explorer*/
- 
+
     /*Aplicamos bordes redondeados a las esquinas inferiores.*/
     border-radius: 0px 0px 5px 5px;
     -moz-border-radius: 0px 0px 5px 5px;
     -webkit-border-radius: 0px 0px 5px 5px;
-    
+
     /*definimos desde donde inicia el ancho de la caja*/
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
- 
+
     /*Aplicamos la animación */
     -webkit-transition: all 0.3s ease-in-out 0s;
     -moz-transition: all 0.3s ease-in-out 0s;
@@ -136,15 +145,15 @@ ul li ul {
 
 
 
- 
+
 /*Eliminamos el border-bottom al último enlace de la lista*/
 ul li ul.children li:last-child a{border-bottom:none !important;}
- 
+
 
 
 ul li:hover ul.children{
 	display: block;
-    min-height:100px; 
+    min-height:100px;
     opacity:1;
 }
 
@@ -160,7 +169,7 @@ ul li ul.children2 li a{
     border-bottom: 1px solid #2f2f2f;
     background: url(img/arrow-normal.png) no-repeat 7px center !important;
     font-size: 12px;
-	
+
     /*Aplicamos efecto de transation a los enlaces*/
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
@@ -168,14 +177,14 @@ ul li ul.children2 li a{
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
- 
+
 /*Eliminamos el border-bottom al último enlace de la lista*/
 ul li ul.children2 li:last-child a{border-bottom:none !important;}
- 
+
 
 
 ul li:hover ul.children2{
-    min-height:100px; 
+    min-height:100px;
     opacity:1;
     display: block;
 }
@@ -184,7 +193,7 @@ ul li:hover ul.children2{
 	font-size: 1em;
 }
 .children2 p{
-	
+
 	font-size: 0.8em;
 }
 
@@ -197,9 +206,9 @@ nav{
 	display: block;
 	width: 100%;
 	height: 48px;
-	background-color:#10458b; 
+	background-color:#10458b;
 	position: relative;
-    
+
      z-index: 2000;
 
 }
@@ -209,7 +218,7 @@ nav{
 	font-size: 1em;
 }
 .children p{
-	
+
 	font-size: 0.8em;
 }
 #menu{
@@ -224,7 +233,7 @@ nav{
 
 .buscador{
 	position: relative;
-	
+
 	float: right;
 }
 img.icofsc{
@@ -240,7 +249,9 @@ background-repeat: no-repeat;
 background-position: 5px 3px;
 border-radius: 10px;
 border: solid 1px #10458b;
+font-size: 0.8em;
 padding-left: 10px;
+margin-bottom: 5px;
 }
 
 
@@ -249,23 +260,23 @@ padding-left: 10px;
 	text-align: right;
 	width: 75%;
 	background-color: white;
-	
+
 }
 .delivery img{
 	width: 80px;
 	height: auto;
 
 }
-.delivery img:hover{ 
+.delivery img:hover{
     -webkit-transform: scale(1.2);
     transform: scale(1.2)
 }
 
 .datoscontacto{
-	
-	
+
+
 	padding: 20px 10px;
-	line-height: 8px;
+	line-height: 6px;
 
 }
 .flexo{
@@ -274,8 +285,8 @@ padding-left: 10px;
 	font-size: 0.5em;
 }
 .datoscontacto p{
-	
-	
+
+
 	font-family: "flexo-light";
 	color: #10458b;
 	font-size: 0.5em;
@@ -288,7 +299,7 @@ padding-left: 10px;
 }
 .cuerpo{
 	width: 100%;
-	
+
 }
 .izquierda{
 	width: 80%;
@@ -296,31 +307,38 @@ padding-left: 10px;
 	text-align: center;
 	overflow: hidden;
 
-	
+
 }
+
+/* Aca de deberá agregar un mediaqueri para arreglar la subida
+ del cuadrado amarillo */
 .textserv{
 	width: 100%;
+	height: 400px;
 	background-color: #f7a600;
 	position: absolute;
-	margin-top: 235px;
+	margin-top: 210px;
 	opacity: 0.9;
+	padding: 0;
 	transition: margin-top 1s;
 
 
 }
 .textserv:hover{
 	width: 100%;
-	
+
 	position: absolute;
-	margin-top: 150px;
+	margin-top: 100px;
 }
+
+
 .serv{
 	position: relative;
 	width: 23%;
 	height: auto;
 	float: left;
   overflow: hidden;
-	margin: 0 15px 15px 0; 
+	margin: 0 15px 15px 0;
 }
 .leftser{
 	margin-left: 20px;
@@ -346,8 +364,9 @@ padding-left: 10px;
 .encuentranos img{
 	text-align: center;
 	width: 18px;
-	padding-top: 20px;
+	padding-top: 10px;
 	height: auto;
+	margin-bottom: 10px;
 
 }
 
@@ -357,7 +376,7 @@ padding-left: 10px;
 
 	width: 25%;
 
-	
+
 }
 .logo img{
 	min-width: 200px;
@@ -391,7 +410,7 @@ padding-left: 10px;
 .navegador{
 	position: relative;
 	background-color: orange;
-	
+
 }
 
 
@@ -399,6 +418,7 @@ padding-left: 10px;
 	position: relative;
 	text-align: left;
 	display: inline-block;
+	text-decoration: none;
 	float: right;
 }
 .telefonos{
@@ -434,7 +454,7 @@ padding-left: 10px;
 
 
 
-/*   
+/*
 
 
 Agregado Slider
@@ -514,10 +534,10 @@ Agregado Slider
     .slidesjs-pagination li a {
       display: block;
       width: 13px;
-      padding:3px 5px; 
+      padding:3px 5px;
       border-radius: 25px;
       height: auto;
-      
+
       background-color: gray;
       background-image: url(img/pagination.png);
       background-position: 0 0;
@@ -536,12 +556,12 @@ Agregado Slider
 
     #slides a:link,
     #slides a:visited {
-      
+
     }
 
     #slides a:hover,
     #slides a:active {
-      
+
     }
 
     .navbar {
